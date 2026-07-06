@@ -30,7 +30,7 @@ A personal portfolio & blog site with a retro/y2k desktop aesthetic (draggable-l
 
 1. **Clone/download the project**, then move into the project folder:
    ```bash
-   cd react-wordpress
+   cd nessie_blog
    ```
 
 2. **Install dependencies:**
