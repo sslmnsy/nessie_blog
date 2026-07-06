@@ -1,0 +1,51 @@
+.note {
+  width: 100%;
+  box-sizing: border-box;
+
+  background: #fff1dd;
+
+  border: 1.5px solid #e2bc9b;
+  border-radius: 4px;
+
+  padding: 12px 14px;
+
+  box-shadow: 2px 2px 0 #e2bc9b;
+}
+
+.note p {
+  margin-bottom: 10px;
+}
+
+.note p:last-child {
+  margin-bottom: 0;
+}
+
+.title {
+  margin: 0 0 10px;
+
+  font-size: var(--fs-title);
+  font-weight: 700;
+  color: #ff8ea8;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.title span {
+  font-size: 12px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  font-size: var(--fs-body);
+  color: var(--color-text);
+  line-height: 1.5;
+}
+
+.body p {
+  margin: 0;
+}

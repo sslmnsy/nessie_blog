@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'Singsong';
+  src: url('/fonts/singsong.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+:root {
+  /* colors */
+  --color-bg: #F4C2E7;
+  --color-window-bg: #FAF6F5;
+  --color-border: #c9a0b8;
+  --color-border-btn: #b8829a;
+  --color-title-start: #FEA9AE;
+  --color-title-end: #F4C2E7;
+  --color-text: #3a2a3a;
+  --color-text-muted: #5a4a5a;
+  --color-divider: #f5b4d0;
+
+  /* type scale — slightly larger and more comfortable for web reading */
+  --fs-title: clamp(14px, 1.6vw, 18px);
+  --fs-body: clamp(15px, 1.8vw, 17px);
+  --fs-icon: clamp(16px, 2vw, 20px);
+
+  /* spacing */
+  --gap-xs: 6px;
+  --pad-body: 10px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  background: linear-gradient(135deg, #D7EAFC 0%, #FEEDDD 40%, #F4C2E7 100%);
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* small-screen adjustments to keep layout readable */
+@media (max-width: 420px) {
+  body {
+    font-size: 15px;
+  }
+
+  :root {
+    --pad-body: 8px;
+    --gap-xs: 4px;
+  }
+}
+
+/* Reduce body side gutters on small screens so content appears fuller */
+@media (max-width: 768px) {
+  body {
+    padding: 8px 6px;
+    background-position: center top;
+  }
+}
+
+/* Make bubble-text less aggressive on small screens */
+@media (max-width: 480px) {
+  .bubble-text {
+    -webkit-text-stroke: 1px #ff6fa5;
+    filter: none;
+    font-size: clamp(18px, 4.5vw, 28px);
+  }
+}
+
+.bubble-text {
+  font-family: 'Baloo 2', sans-serif;
+  font-weight: 800;
+
+  /* the gradient that will actually show */
+  background: linear-gradient(180deg, #fff 0%, #ffd6e8 60%, #ff9fc4 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  /* THIS is the missing piece — makes the glyph fill transparent
+     so the gradient behind it is visible */
+  -webkit-text-fill-color: transparent;
+  color: transparent; /* fallback for non-webkit */
+
+  /* outline via stroke instead of relying on background-clip to also stroke */
+  -webkit-text-stroke: 2px #ff6fa5;
+
+  /* soft drop shadow for the "puffy" lift off the page */
+  filter: drop-shadow(2px 3px 0 #ff6fa5) drop-shadow(4px 6px 6px rgba(0,0,0,0.15));
+}

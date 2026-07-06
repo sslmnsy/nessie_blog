@@ -1,0 +1,46 @@
+.page-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 24px;
+  font-family: 'Poppins', sans-serif;
+  color: #4a3b52;
+}
+
+/* Mobile-friendly container: full-width and tighter padding while keeping a soft panel look */
+@media (max-width: 768px) {
+  .page-container {
+    max-width: 100%;
+    margin: 0;
+    padding: 18px 14px;
+    background: linear-gradient(180deg, rgba(255,249,247,0.8), rgba(255,244,247,0.6));
+    border-radius: 12px;
+  }
+}
+
+.page-back {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: #e888a3;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.page-back:hover {
+  text-decoration: underline;
+}
+
+.page-title {
+  font-size: 2.5rem;
+  background: linear-gradient(90deg, #f7a8c4, #c9a0dc);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  margin-bottom: 24px;
+}
+
+.page-status {
+  text-align: center;
+  padding: 60px 0;
+  font-size: 1.2rem;
+  color: #a586b0;
+}

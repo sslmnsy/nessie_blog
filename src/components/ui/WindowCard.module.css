@@ -1,0 +1,124 @@
+.window {
+  display: flex;
+  flex-direction: column;
+
+  background: var(--color-window-bg);
+  border: 1.5px solid var(--color-border);
+  border-radius: 4px 4px 3px 3px;
+
+  overflow: hidden;
+  box-shadow: 2px 2px 0 var(--color-border);
+}
+
+.titleBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: linear-gradient(90deg, var(--color-title-start), var(--color-title-end));
+  padding: 3px 6px;
+  border-radius: 3px 3px 0 0;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  font-size: var(--fs-title);
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.buttons {
+  display: flex;
+  gap: 2px;
+}
+
+.buttons button {
+  width: 11px;
+  height: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--color-border-btn);
+  border-radius: 1px;
+  background: var(--color-window-bg);
+  cursor: pointer;
+
+  font-size: 7px;
+  font-weight: bold;
+  line-height: 1;
+  padding: 0;
+}
+
+.buttons button:hover {
+  background: var(--color-title-start);
+}
+
+.body {
+  padding: var(--pad-body);
+  flex: 1;
+  min-height: 0;
+}
+
+@media (max-width: 768px) {
+  .titleBar {
+    padding: 6px 8px;
+  }
+
+  .body {
+    padding: 8px;
+  }
+
+  .window {
+    overflow: visible;
+  }
+}
+
+@media (max-width: 480px) {
+  .titleBar {
+    padding: 4px 6px;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+
+  .buttons button {
+    width: 12px;
+    height: 12px;
+    font-size: 8px;
+  }
+
+  .body {
+    padding: 6px;
+  }
+}
+
+/* Scrollbar styling for better mobile appearance */
+.window .body::-webkit-scrollbar,
+.projectList::-webkit-scrollbar {
+  width: 8px;
+}
+.window .body::-webkit-scrollbar-track,
+.projectList::-webkit-scrollbar-track {
+  background: transparent;
+}
+.window .body::-webkit-scrollbar-thumb,
+.projectList::-webkit-scrollbar-thumb {
+  background-color: rgba(58,42,58,0.12);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+@media (max-width: 768px) {
+  .window {
+    overflow: visible;
+    box-shadow: none;
+    border-radius: 8px;
+  }
+}
+

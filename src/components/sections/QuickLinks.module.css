@@ -1,0 +1,29 @@
+.list {
+  list-style: none;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-xs);
+
+  padding: 6px 2px;
+
+  font-size: var(--fs-body);
+  color: var(--color-text-muted);
+
+  border-bottom: 1px dashed var(--color-divider);
+}
+
+.list li:last-child {
+  border-bottom: none;
+}
+
+.icon {
+  font-size: var(--fs-icon);
+  flex-shrink: 0;
+}
+
+.quickLinksWindow {
+  width: 100%;
+}

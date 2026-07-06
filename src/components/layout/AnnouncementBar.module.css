@@ -1,0 +1,14 @@
+.announce {
+  background: #FEA9AE;
+  padding: 5px 0;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 700;
+  color: #3a2a3a;
+  border-bottom: 2px solid #c9a0b8;
+  letter-spacing: .5px;
+}
+
+.announce span {
+  margin: 0 12px;
+}

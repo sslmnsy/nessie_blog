@@ -1,0 +1,291 @@
+/* src/components/home/PortfolioGrid.module.css */
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 20px;
+  align-items: flex-start;
+}
+
+.leftGroup {
+  display: flex;
+  align-items: stretch;
+  gap: 16px;
+  flex: 2 1 480px;
+}
+
+.projects {
+  flex: 1 1 240px;
+  min-width: 240px;
+}
+
+.projects.window {
+  height: 100%;
+}
+
+.projects.window .body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+/* Ensure WindowCard elements are full-width inside grid tiles */
+.grid .window {
+  width: 100%;
+}
+
+.col2 {
+  flex: 1 1 240px;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.col3 {
+  flex: 1 1 240px;
+  min-width: 240px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    flex-direction: column;
+  }
+
+  .leftGroup {
+    flex-direction: column;
+  }
+
+  .projects.window {
+    height: auto;
+  }
+
+  .projectList {
+    max-height: none;
+    overflow: visible;
+    padding-right: 0;
+  }
+}
+/* smaller breakpoints for better mobile layout */
+@media (max-width: 768px) {
+  .grid {
+    padding: 16px;
+    gap: 12px;
+  }
+
+  .projectThumb {
+    height: 100px;
+    font-size: 24px;
+  }
+
+  .projectCard {
+    padding: 10px;
+  }
+
+  .blogList li {
+    font-size: 15px;
+    padding: 8px 0;
+  }
+
+  .readMore,
+  .viewAll {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  .projectThumb {
+    height: 64px;
+    font-size: 22px;
+  }
+
+  .projectCard h3 {
+    font-size: 14px;
+  }
+
+  .projectStack,
+  .projectDesc {
+    font-size: 13px;
+  }
+}
+
+/* ---- projects ---- */
+.projectList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 6px;
+}
+.projectCard {
+  background: #FDF2F8;
+  border: 1.5px solid #c9a0b8;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.projectThumb {
+  background: linear-gradient(135deg, #D7EAFC, #F4C2E7);
+  border-radius: 8px;
+  height: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin-bottom: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.projectThumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.projectCard h3 {
+  font-size: 15px;
+  color: #3a2a3a;
+  margin-bottom: 2px;
+}
+
+.projectStack {
+  font-size: 11px;
+  color: #b8829a;
+  margin-bottom: 6px;
+}
+
+.projectDesc {
+  font-size: 12px;
+  color: #5a4a5a;
+  line-height: 1.4;
+}
+
+.viewAll {
+  display: inline-block;
+  margin-top: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #FEA9AE;      
+  text-decoration: none;
+}
+
+.blogList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+.blogList li {
+  font-size: 13px;
+  color: #3a2a3a;
+  padding: 10px 0;
+  border-bottom: 1px dashed #f5b4d0;
+}
+
+.blogList li:last-child {
+  border-bottom: none;
+}
+
+.blogList a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.blogList a:hover {
+  color: #FEA9AE;
+}
+
+.chevron {
+  color: #FEA9AE;
+  margin-right: 4px;
+}
+
+.readMore {
+  display: inline-block;
+  margin-top: auto;
+  padding-top: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #FEA9AE;
+  text-decoration: none;
+}
+
+/* ---- my faves ---- */
+.favesText {
+  font-size: 12px;
+  color: #5a4a5a;
+  line-height: 1.6;
+}
+
+/* ---- about ---- */
+.aboutContent {
+  text-align: center;
+}
+
+.aboutAvatar {
+  width: 120px;
+  height: 120px;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background: #FDF2F8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.aboutContent h3 {
+  font-size: 18px;
+  color: #3a2a3a;
+}
+
+.aboutRole {
+  font-size: 12px;
+  color: #b8829a;
+  margin-bottom: 10px;
+}
+
+.aboutBio {
+  font-size: 12px;
+  color: #5a4a5a;
+  line-height: 1.5;
+  margin-bottom: 14px;
+  text-align: left;
+}
+
+.aboutBtn {
+  display: block;
+  width: 100%;
+  background: #FEA9AE;
+  border: 1.5px solid #c9a0b8;
+  border-radius: 6px;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #3a2a3a;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.aboutBtn:hover {
+  background: #FD9199;
+}
+
+.aboutBtn:hover {
+  background: #F4C2E7;
+}
